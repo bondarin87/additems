@@ -1,15 +1,13 @@
-"use strict";
 
+let btn = document.querySelector('#btn');
+let list = document.querySelector('#list');
 
-let button = document.querySelector('button');
-let list   = document.querySelector('ul');
-let items  = list.querySelectorAll('li');
-
-button.addEventListener('click', function(event) {
+btn.addEventListener('click',function() {
     let item = document.createElement('li');
-    item.textContent = 'item';
+    item.textContent = 'click me';
     list.appendChild(item);
 })
-list.addEventListener('click',function(event) {
-    event.target.textContent += '!';
+
+list.addEventListener('click',function (event) {
+   event.target.innerHTML = '&hearts; &clubs; &spades; &diams;'
 })
